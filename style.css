@@ -1,0 +1,346 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+@keyframes anim1 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        backdrop-filter: blur(0px);
+    }
+
+    100% {
+        backdrop-filter: blur(5px);
+    }
+}
+
+@keyframes anim3 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    10% {
+        transform: translateX(-10px);
+    }
+
+    20% {
+        transform: translateX(10px);
+    }
+
+    30% {
+        transform: translateX(-10px);
+    }
+
+    40% {
+        transform: translateX(10px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    60% {
+        transform: translateX(10px);
+    }
+
+    70% {
+        transform: translateX(-10px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    90% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+body {
+    background-image: url(./pics/city.png);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.header-pic {
+    width: 100px;
+    filter: drop-shadow(0px 0px 5px #00000052);
+}
+
+.header-title {
+    font-size: 28px;
+    font-weight: 300;
+    color: #fff;
+    text-shadow: 0px 0px 5px #00000052;
+}
+
+.timer-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70vh;
+    height: 30vh;
+    background-color: #ffffffc0;
+    margin: 4vh 0px;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 2vh;
+}
+
+.title {
+    font-size: 5vh;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0px 0px 10px #0000007a;
+    text-align: center;
+}
+
+.timer {
+    font-size: 4vh;
+    font-weight: 600;
+}
+
+.descr {
+    font-size: 4vh;
+    font-weight: 300;
+}
+
+.get-gift-button {
+    width: auto;
+    height: 70px;
+    padding-inline: 40px;
+    background: #ffffffe3;
+    border: 0;
+    font-size: 28px;
+    font-weight: 300;
+    color: black;
+    border-radius: 10px 10px 10px 10px;
+    transition: all 0.05s linear;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.get-gift-button:hover {
+    background: #dadada;
+}
+
+.get-gift-button:active {
+    background: #d3d3d3;
+    transform: scale(0.95);
+    box-shadow: 0px 0px 0px 5px black;
+}
+
+.gifts-div {
+    width: 100%;
+    height: 100vw;
+    background: #282828e5;
+    margin-top: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gifts-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    margin-top: 130px;
+    text-shadow: 0px 0px 5px #00000052;
+}
+
+.gifts-descr {
+    font-size: 28px;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    text-shadow: 0px 0px 5px #00000052;
+}
+
+.gift-itself {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gift-image {
+    width: 200px;
+    margin-top: 50px;
+}
+
+.gift-button {
+    height: 60px;
+    padding-inline: 40px;
+    background: linear-gradient(45deg, #b8b8b8, #797979);
+    background-size: 100%;
+    border: 0;
+    font-size: 28px;
+    font-weight: 300;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 50px;
+    transition: all 0.05s linear;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.1s linear;
+}
+
+.gift-button:hover {
+    transform: scale(1.02);
+    background-size: 120%;
+}
+
+.gift-button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 0px 0px 5px #181818;
+}
+
+.gift-window {
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    margin-top: 200px;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 0px 30px #00000050;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gift-list-window {
+    width: 600px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    margin-top: 200px;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 0px 30px #00000050;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gift-window2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-left: 730px;
+    margin-top: 20px;
+    background-color: rgb(189, 189, 189);
+    border-radius: 4px 4px 4px 4px;
+    transition: all 0.05s linear;
+}
+
+.close-button:hover {
+    background-color: #ff6f6f;
+}
+
+.close-button:active {
+    background-color: #cc5a5a;
+}
+
+.window-title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.window-gift-descr {
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.get-back {
+    width: 80px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border: 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    border-radius: 10px 10px 10px 10px;
+    transition: all 0.05s linear;
+    opacity: 0.6;
+}
+
+.get-back:hover {
+    background: #e4e4e4;
+}
+
+.get-back:active {
+    background: #c4c4c4;
+}
+
+.backdrop-div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.dead-zone {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.gift-code {
+    position: absolute;
+    top: 255vh;
+    color: white;
+    font-size: 22px;
+    font-weight: 300;
+}
